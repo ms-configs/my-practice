@@ -1,0 +1,43 @@
+@import "../../variables.scss";
+
+body {
+  background-color: $background;
+  max-width: 1200px;
+  padding: 20px;
+  .App {
+    margin: 50px auto 0;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+div.button {
+  width: 180px;
+  height: 50px;
+  background-color: $background;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 20px 20px 60px #7d7d7d, -20px -20px 60px #ffffff;
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.5s ease;
+  &:hover{
+    transform: translateX(-50%) translateY(-10px);
+  }
+  &__wrapper {
+    a {
+      color: $deep;
+      font-size: 15px;
+      line-height: 50px;
+      text-align: center;
+      width: 100%;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+}
